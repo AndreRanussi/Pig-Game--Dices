@@ -7,7 +7,6 @@
 - HTML
 - CSS
 - JavaScript
--
 
 <!-- # Optional To Do -->
 

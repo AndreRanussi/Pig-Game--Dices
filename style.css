@@ -2,4 +2,79 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: nunito, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #bf2e34 0%, #753682 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.landing {
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
+  line-height: 3rem;
+}
+
+.landing img {
+  position: absolute;
+  height: 50%;
+  top: 60%;
+  left: 75%;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.players label {
+  font-size: 2rem;
+}
+
+.name-input {
+  width: 20rem;
+  height: 3rem;
+}
+::placeholder,
+input[type="text"] {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn {
+  padding: 0.4rem 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #444;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 10rem;
+  /* box-shadow:  ; */
 }

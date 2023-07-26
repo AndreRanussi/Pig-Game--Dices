@@ -6,8 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="style.css" rel="stylesheet" />
     <title>Pig Game - Dices</title>
+    <!-- Nunito Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <section class="landing">
+      <h1>THE PIG GAME</h1>
+      <h2>Enter your player names!</h2>
+      <div class="landing-container">
+        <div class="players">
+          <label for="p1name">Player 1</label>
+          <input
+            type="text"
+            id="p1name"
+            class="name-input"
+            name="p1name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="players">
+          <label for="p2name">Player 2</label>
+          <input
+            type="text"
+            id="p2name"
+            class="name-input"
+            name="p2name"
+            placeholder="Enter your name"
+          />
+        </div>
+      </div>
+      <button class="btn">Play!</button>
+      <img src="assets/pig-image.png" alt="cartoon pig image"
+    </section>
+    <section class="player1"></section>
+    <section class="player2"></section>
     <script src="script.js"></script>
   </body>
 </html>
