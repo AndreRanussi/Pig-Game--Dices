@@ -15,11 +15,11 @@
     />
   </head>
   <body>
-    <section class="landing">
+    <section class="landing hide">
       <h1>THE PIG GAME</h1>
       <h2>Enter your player names!</h2>
-      <div class="landing-container">
-        <div class="players">
+      <div class="landing-wrap">
+        <div class="player-names">
           <label for="p1name">Player 1</label>
           <input
             type="text"
@@ -29,7 +29,7 @@
             placeholder="Enter your name"
           />
         </div>
-        <div class="players">
+        <div class="player-names">
           <label for="p2name">Player 2</label>
           <input
             type="text"
@@ -41,10 +41,23 @@
         </div>
       </div>
       <button class="btn">Play!</button>
-      <img src="assets/pig-image.png" alt="cartoon pig image"
+      <img src="assets/pig-image.png" alt="cartoon pig image" />
     </section>
-    <section class="player1"></section>
-    <section class="player2"></section>
+    <section class="players-cards">
+      <button class="btn btn2 new-game-btn hide">🔄 New Game</button>
+      <button class="btn btn2 roll-dice-btn hide">🎲 Roll Dice</button>
+      <button class="btn btn2 hold-btn hide">📥 Hold</button>
+      <div class="player1 card active">
+        <h2 class="player-name">Player 1</h2>
+        <p class="score">0</p>
+        <p class="current-score">Current Score <span class="total">0</span></p>
+      </div>
+      <div class="player2 card">
+        <h2 class="player-name">Player 2</h2>
+        <p class="score">0</p>
+        <p class="current-score">Current Score <span class="total">0</span></p>
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
