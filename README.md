@@ -16,8 +16,8 @@ https://andreranussi.github.io/Pig-Game--Dices/
 
 # Optional To Do
 
-- Ability to edit the player names without having to refresh the page.
-- Add a modal window to show the winning player.
+- Ability to edit the player names without having to refresh the page. - Added
+- Add a modal window to show the winning player. - Added
 
 # Usage
 

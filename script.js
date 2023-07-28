@@ -22,12 +22,15 @@ const btnHold = document.querySelector(".btn--hold");
 const dice = document.querySelector(".dice");
 const player1Card = document.querySelector(".player--0");
 const player2Card = document.querySelector(".player--1");
-const pCardsHide = document.querySelector(".hide-win");
-
+const winnerModal = document.querySelector(".winner");
+const modalWinner = document.querySelector(".player-modal");
+const modalClose = document.querySelector(".close");
+const settings = document.querySelector(".btn--settings");
 // read,save and display the name of the players and start game
+let player1;
+let player2;
+
 playBtn.addEventListener("click", () => {
-  let player1;
-  let player2;
   if (
     enterPlayerName1.value.length === 0 ||
     enterPlayerName2.value.length === 0
@@ -93,6 +96,7 @@ btnRollDice.addEventListener("click", () => {
 });
 
 btnHold.addEventListener("click", () => {
+  //player 1
   if (activePlayer) {
     player1TotalScore += player1CurrentScore;
     player1Total.textContent = player1TotalScore;
@@ -103,7 +107,10 @@ btnHold.addEventListener("click", () => {
       activePlayerRefresh();
     } else if (player1TotalScore >= 100) {
       player1Card.classList.add("player--winner");
+      winnerModal.classList.remove("hide");
+      modalWinner.textContent = player1;
     }
+    //player 2
   } else if (!activePlayer) {
     player2TotalScore += player2CurrentScore;
     player2Total.textContent = player2TotalScore;
@@ -114,8 +121,27 @@ btnHold.addEventListener("click", () => {
       activePlayerRefresh();
     } else if (player2TotalScore >= 100) {
       player2Card.classList.add("player--winner");
+      winnerModal.classList.remove("hide");
+      modalWinner.textContent = player2;
     }
   }
+});
+
+modalClose.addEventListener("click", () => {
+  winnerModal.classList.add("hide");
+  newGame();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    winnerModal.classList.add("hide");
+    newGame();
+  }
+});
+
+settings.addEventListener("click", () => {
+  gameMain.classList.add("hide");
+  landing.classList.add("hide");
 });
 
 //toggle player function

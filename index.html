@@ -14,7 +14,7 @@
         <div class="landing-title">
           <h1>THE PIG GAME</h1>
           <div>
-            <img src="pig-image.png" alt="cartoon pig image" />
+            <img class="pig" src="pig-image.png" alt="cartoon pig image" />
           </div>
         </div>
         <h2 class="landing-message">Enter your player names!</h2>
@@ -47,7 +47,7 @@
     </landing>
     <!-- main gaming section -->
     <main class="main hide">
-      <section class="hide-win player player--0 player--active">
+      <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">0</p>
         <div class="current">
@@ -55,19 +55,28 @@
           <p class="current-score" id="current--0">0</p>
         </div>
       </section>
-      <section class="hide-win player player--1">
+      <section class="player player--1">
         <h2 class="name" id="name--1">Player 2</h2>
-        <p class="score" id="score--1">0</p>
+        <p class="score" id="score--1"></p>
         <div class="current">
           <p class="current-label">Current</p>
           <p class="current-score" id="current--1">0</p>
         </div>
       </section>
-      <img src="dice-5.png" alt="Playing dice" class="hide-win dice" />
-      <button class="hide-win btn btn--new">🔄 New game</button>
-      <button class="hide-win btn btn--roll">🎲 Roll dice</button>
-      <button class="hide-win btn btn--hold">📥 Hold</button>
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--settings">⚙</button>
     </main>
+    <section class="winner hide">
+      <div class="winner-modal">
+        <button><span class="close">&times;</span></button>
+        <h1>The Winner is....</h1>
+        <p class="player-modal">Player Winner</p>
+        <img class="trophy" src="trophy.png" alt="Trophy Image" />
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>
