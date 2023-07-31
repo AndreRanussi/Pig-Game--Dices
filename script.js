@@ -26,6 +26,7 @@ const winnerModal = document.querySelector(".winner");
 const modalWinner = document.querySelector(".player-modal");
 const modalClose = document.querySelector(".close");
 const settings = document.querySelector(".btn--settings");
+
 // read,save and display the name of the players and start game
 let player1;
 let player2;
@@ -47,16 +48,17 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-let player1CurrentScore;
-let player2CurrentScore;
-let player1TotalScore;
-let player2TotalScore;
-let callRandomNumber;
+let player1CurrentScore,
+  player2CurrentScore,
+  player1TotalScore,
+  player2TotalScore,
+  callRandomNumber;
 let activePlayer = player1Card.classList.contains("player--active");
 let activePlayerRefresh = function () {
   activePlayer = player1Card.classList.contains("player--active");
 };
 
+// random number function
 const randomNumber = function () {
   return Math.floor(Math.random() * 6) + 1;
 };
@@ -68,8 +70,7 @@ btnNewGame.addEventListener("click", () => newGame());
 btnRollDice.addEventListener("click", () => {
   callRandomNumber = randomNumber();
   // change dice picture
-  const source = `dice-${callRandomNumber}.png`;
-  dice.src = source;
+  dice.src = `dice-${callRandomNumber}.png`;
   // check if dice number is greater than 1
   if (callRandomNumber > 1) {
     //if the dice number is higher than 1, check which player is playing and add dice number to the current score.
